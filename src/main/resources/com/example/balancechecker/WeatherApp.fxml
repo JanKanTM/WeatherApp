@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="640.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.balancechecker.WeatherController">
+   <children>
+      <ImageView fx:id="imgBackground" fitHeight="640.0" fitWidth="360.0" layoutX="115.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../assets/images/cold-bg.jpg" />
+         </image>
+      </ImageView>
+      <Text fx:id="txtWeatherCelcius" fill="#10121b" layoutX="14.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" 0 C°" textAlignment="CENTER" wrappingWidth="260.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="160.0">
+         <font>
+            <Font name="Dubai Bold" size="72.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="50.0" layoutY="121.0" opacity="0.4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #090A0A; -fx-background-radius: 20px;" AnchorPane.bottomAnchor="319.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="121.0">
+         <children>
+            <AnchorPane opacity="0.4" prefHeight="200.0" prefWidth="228.0" style="-fx-background-color: #fff; -fx-background-radius: 20px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <effect>
+                  <Shadow blurType="TWO_PASS_BOX">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Shadow>
+               </effect>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtFldSearchBar" alignment="CENTER" layoutX="106.0" layoutY="2.0" onAction="#getWeatherData" promptText="Search..." style="-fx-background-color: #fff; -fx-background-radius: 0px 0px 20px 20px;" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Calibri Light" size="19.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lblWeatherInfo" alignment="CENTER" layoutX="50.0" layoutY="372.0" opacity="0.7" prefHeight="68.0" prefWidth="260.0" text="Clouds" textFill="#10121b" AnchorPane.bottomAnchor="320.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="250.0">
+         <font>
+            <Font name="Dubai Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="615.0" text="API by https://www.metaweather.com/api/" textFill="#ffffff23">
+         <font>
+            <Font name="Dubai Light" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
